@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d18">
+  <title>Diamond Royale — Speelhal</title>
+  <link rel="stylesheet" href="CasinoGame.css?v=3">
+  <script src="CasinoGame.js?v=3" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Diamond Royale home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M10 7h20l7 10-17 19L3 17 10 7Z"/><path d="m3 17 17 1 17-1M10 7l5 11 5 18 5-18 5-11"/></svg></span>
+      <span><b>DIAMOND</b><small>R O Y A L E</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Hoofdnavigatie"><a class="nav-link active" href="#games">Speelhal</a><a class="nav-link" href="#about">Over het spel</a></nav>
+    <div class="top-actions"><div class="balance-pill"><span class="coin-icon">◆</span><span><small>JOUW SALDO</small><b id="top-balance">2.500</b></span><span class="currency">CHIPS</span></div><button class="icon-button" id="sound-toggle" aria-label="Geluid aan of uit" title="Geluid aan of uit">♫</button></div>
+  </header>
+
+  <main id="home">
+    <section class="hero" id="games">
+      <div class="hero-copy"><div class="eyebrow"><span class="eyebrow-line"></span> DE SPEELHAL <span class="eyebrow-line"></span></div>
+        <h1>Speel met stijl.<br><em>Win in glans.</em></h1>
+        <p>Stap binnen in een wereld vol fonkelende kansen. Kies je spel, zet je speelchips in en geniet van de show.</p>
+        <div class="hero-actions"><a class="button button-gold" href="#table"><span>Ontdek de spellen</span><span class="arrow">↘</span></a><span class="safe-note"><span class="safe-icon">♧</span> Alleen speelgeld · altijd voor de lol</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="diamond-big"><div class="diamond-facet facet-a"></div><div class="diamond-facet facet-b"></div><div class="diamond-facet facet-c"></div><div class="diamond-facet facet-d"></div><div class="diamond-facet facet-e"></div></div><span class="spark spark-one">✦</span><span class="spark spark-two">✧</span><span class="spark spark-three">✦</span><span class="floating-chip chip-one">◆</span><span class="floating-chip chip-two">♠</span><span class="art-caption">THE HOUSE OF<br><b>GOOD FORTUNE</b></span></div>
+      <div class="hero-bottom"><span>01 — VIER KLASSIEKERS</span><span class="scroll-hint">SCROLL OM TE SPELEN <span>↓</span></span><span>GEMAAKT VOOR DE LOL</span></div>
+    </section>
+
+    <section class="games-section" id="table">
+      <div class="section-heading"><div><div class="eyebrow left"><span class="eyebrow-line"></span> KIES JE TAFEL</div><h2>Jouw moment. <em>Jouw spel.</em></h2></div><span class="section-index">01 <i>/</i> 04</span></div>
+      <div class="game-tabs" role="tablist" aria-label="Kies een spel">
+        <button class="game-tab active" id="tab-slots" role="tab" aria-selected="true" aria-controls="game-slots"><span class="tab-icon">✷</span><span><b>Diamond Slots</b><small>DE GELUKSMACHINE</small></span><span class="tab-arrow">↗</span></button>
+        <button class="game-tab" id="tab-poker" role="tab" aria-selected="false" aria-controls="game-poker"><span class="tab-icon cards-icon">♠</span><span><b>Royal Poker</b><small>VIDEO POKER · 5 KAARTEN</small></span><span class="tab-arrow">↗</span></button>
+        <button class="game-tab" id="tab-blackjack" role="tab" aria-selected="false" aria-controls="game-blackjack"><span class="tab-icon cards-icon">♥</span><span><b>Blackjack</b><small>TEGEN DE DEALER</small></span><span class="tab-arrow">↗</span></button>
+        <button class="game-tab" id="tab-roulette" role="tab" aria-selected="false" aria-controls="game-roulette"><span class="tab-icon">◉</span><span><b>Roulette</b><small>EUROPEES · 0–36</small></span><span class="tab-arrow">↗</span></button>
+      </div>
+
+      <section class="game-panel active" id="game-slots" role="tabpanel" aria-labelledby="tab-slots">
+        <div class="table-top"><div><span class="table-kicker">TAFEL Nº 01 <span class="live-dot"></span></span><h3>Diamond <em>Slots</em></h3></div><div class="table-info"><span><b>3</b> rollen</span><span class="info-divider"></span><span>Tot <b>10×</b> je inzet</span></div></div>
+        <div class="slot-stage"><div class="slot-halo"></div><div class="slot-machine"><div class="machine-top"><span>✦ &nbsp; DIAMOND ROYALE &nbsp; ✦</span><div class="machine-lights"><i></i><i></i><i></i><i></i><i></i></div></div><div class="reels-wrap"><div class="reel-window" id="reel-0"><div class="reel-symbol">◆</div></div><div class="reel-window" id="reel-1"><div class="reel-symbol">♛</div></div><div class="reel-window" id="reel-2"><div class="reel-symbol">♦</div></div></div><div class="payline"><span>✦ ─────────── ✦ ─────────── ✦</span></div><div class="machine-base"><span>GOOD LUCK, DARLING</span><span class="base-gem">◇</span><span>GOOD LUCK, DARLING</span></div></div><div class="slot-side-gems"><span>✦</span><span>◆</span><span>✧</span></div></div>
+        <div class="game-controls"><div class="bet-control"><label for="slot-bet">INZET</label><div class="stepper"><button class="step-button" data-bet-for="slot-bet" data-step="-1" aria-label="Inzet verlagen">−</button><input id="slot-bet" class="bet-input" type="number" value="50" min="10" max="500" step="10" inputmode="numeric"><button class="step-button" data-bet-for="slot-bet" data-step="1" aria-label="Inzet verhogen">+</button></div><span class="bet-hint">10–500 chips</span></div><div class="slot-message" id="slot-message" aria-live="polite"><span class="message-gem">✧</span><span>Klaar voor een beetje glans?</span></div><button class="spin-button" id="spin-button"><span class="spin-shine"></span><span class="spin-icon">↻</span><b>DRAAIEN</b><small>INZET <span id="spin-bet-label">50</span> CHIPS</small></button></div>
+        <div class="paytable"><div class="paytable-title">UITBETALING <span>3 GELIJKE SYMBOLEN</span></div><div class="pay-row"><span class="pay-symbols">◆ ◆ ◆</span><span>Diamant</span><b>10×</b></div><div class="pay-row"><span class="pay-symbols gold">♛ ♛ ♛</span><span>Kroon</span><b>5×</b></div><div class="pay-row"><span class="pay-symbols pink">♥ ♥ ♥</span><span>Hart</span><b>3×</b></div><div class="pay-row"><span class="pay-symbols blue">♦ ♦ ♦</span><span>Ruit</span><b>2×</b></div><div class="pay-row"><span class="pay-symbols pale">★ ★ ★</span><span>Ster</span><b>1.5×</b></div></div>
+      </section>
+
+      <section class="game-panel poker-panel" id="game-poker" role="tabpanel" aria-labelledby="tab-poker" hidden>
+        <div class="table-top"><div><span class="table-kicker">TAFEL Nº 02 <span class="live-dot"></span></span><h3>Royal <em>Poker</em></h3></div><div class="table-info"><span><b>5</b> kaarten</span><span class="info-divider"></span><span>Houd vast, trek bij</span></div></div>
+        <div class="poker-felt"><div class="felt-ornament">♧</div><div class="poker-status" id="poker-status" aria-live="polite">Zet je inzet en deel je kaarten.</div><div class="card-row" id="card-row" aria-label="Jouw kaarten"></div><div class="hold-instruction" id="hold-instruction">KLIK OP EEN KAART OM DEZE VAST TE HOUDEN</div><div class="poker-controls"><div class="bet-control poker-bet"><label for="poker-bet">INZET</label><div class="stepper"><button class="step-button" data-bet-for="poker-bet" data-step="-1" aria-label="Inzet verlagen">−</button><input id="poker-bet" class="bet-input" type="number" value="50" min="10" max="500" step="10" inputmode="numeric"><button class="step-button" data-bet-for="poker-bet" data-step="1" aria-label="Inzet verhogen">+</button></div></div><button class="button button-outline" id="deal-button">♠ &nbsp; DEEL KAARTEN</button><button class="button button-gold draw-button" id="draw-button" disabled>KAARTEN TREKKEN &nbsp; ↗</button></div><div class="poker-paytable"><span>PAAR BOEREN+ <b>1×</b></span><span>TWEE PAAR <b>2×</b></span><span>DRILLING <b>3×</b></span><span>STRAIGHT <b>4×</b></span><span>FLUSH <b>6×</b></span><span>FULL HOUSE <b>9×</b></span><span>FOUR OF A KIND <b>25×</b></span><span>STRAIGHT FLUSH <b>50×</b></span><span>ROYAL FLUSH <b>250×</b></span></div></div>
+      </section>
+      <section class="game-panel" id="game-blackjack" role="tabpanel" aria-labelledby="tab-blackjack" hidden>
+        <div class="table-top"><div><span class="table-kicker">TAFEL Nº 03 <span class="live-dot"></span></span><h3>Royal <em>Blackjack</em></h3></div><div class="table-info"><span>Dealer staat op 17</span><span class="info-divider"></span><span>Blackjack betaalt 3:2</span></div></div>
+        <div class="blackjack-felt">
+          <div class="blackjack-hand"><span class="hand-label">DEALER <b id="dealer-total"></b></span><div class="blackjack-cards" id="dealer-cards" aria-label="Kaarten van de dealer"></div></div>
+          <div class="blackjack-status" id="blackjack-status" aria-live="polite">Kies je inzet en deel kaarten.</div>
+          <div class="blackjack-hand"><span class="hand-label">JOUW HAND <b id="player-total"></b></span><div class="blackjack-cards" id="player-cards" aria-label="Jouw kaarten"></div></div>
+          <div class="poker-controls blackjack-controls">
+            <div class="bet-control"><label for="blackjack-bet">INZET</label><div class="stepper"><button class="step-button" data-bet-for="blackjack-bet" data-step="-1" aria-label="Inzet verlagen">−</button><input id="blackjack-bet" class="bet-input" type="number" value="50" min="10" max="500" step="10" inputmode="numeric"><button class="step-button" data-bet-for="blackjack-bet" data-step="1" aria-label="Inzet verhogen">+</button></div><span class="bet-hint">10–500 chips</span></div>
+            <button class="button button-outline" id="blackjack-deal">♠ &nbsp; DEEL KAARTEN</button><button class="button button-outline" id="blackjack-hit" disabled>KAART NEMEN</button><button class="button button-gold" id="blackjack-stand" disabled>STAAN</button>
+          </div>
+        </div>
+      </section>
+      <section class="game-panel" id="game-roulette" role="tabpanel" aria-labelledby="tab-roulette" hidden>
+        <div class="table-top"><div><span class="table-kicker">TAFEL Nº 04 <span class="live-dot"></span></span><h3>Diamond <em>Roulette</em></h3></div><div class="table-info"><span>Enkel nul</span><span class="info-divider"></span><span>Rood / zwart betaalt 1:1</span></div></div>
+        <div class="roulette-felt">
+          <div class="roulette-wheel" aria-label="Europees roulettewiel"><span class="wheel-center">◇</span><span class="wheel-label">DIAMOND ROYALE</span></div>
+          <div class="roulette-board">
+            <button class="roulette-number green" data-roulette-number="0" aria-label="Nummer 0, groen">0</button>
+            <div class="roulette-grid" id="roulette-grid"></div>
+          </div>
+          <div class="roulette-controls">
+            <div class="bet-control"><label for="roulette-bet">INZET</label><div class="stepper"><button class="step-button" data-bet-for="roulette-bet" data-step="-1" aria-label="Inzet verlagen">−</button><input id="roulette-bet" class="bet-input" type="number" value="50" min="10" max="500" step="10" inputmode="numeric"><button class="step-button" data-bet-for="roulette-bet" data-step="1" aria-label="Inzet verhogen">+</button></div></div>
+            <label class="roulette-choice" for="roulette-choice">INZET OP<select id="roulette-choice"><option value="red">Rood</option><option value="black">Zwart</option><option value="even">Even</option><option value="odd">Oneven</option><option value="low">Laag (1–18)</option><option value="high">Hoog (19–36)</option><option value="number">Enkel nummer</option></select></label>
+            <button class="button button-gold roulette-spin" id="roulette-spin">DRAAI HET WIEL ↻</button>
+          </div>
+          <p class="roulette-status" id="roulette-status" aria-live="polite">Kies een inzet en draai het wiel.</p>
+        </div>
+      </section>
+    </section>
+
+    <section class="promise" id="about"><div class="promise-gem">◇</div><div><div class="eyebrow left"><span class="eyebrow-line"></span> SPEEL VERANTWOORD</div><h2>Alleen voor <em>de fun.</em></h2><p>Diamond Royale is een spel. Je speelt met virtuele chips zonder geldwaarde. Veel speelplezier!</p></div><div class="promise-stats"><div><b>0</b><span>ECHT GELD</span></div><i></i><div><b>100<span>%</span></b><span>SPEELPLEZIER</span></div><button id="reset-balance" class="reset-button">↺ &nbsp; Saldo herstellen</button></div></section>
+    <footer><a class="footer-brand" href="#home">◇ &nbsp; DIAMOND ROYALE</a><span>Een spelletje om van te genieten · Alleen virtuele chips</span><a href="#games" class="back-top">TERUG NAAR BOVEN ↑</a></footer>
+  </main>
+</body>
+</html>
